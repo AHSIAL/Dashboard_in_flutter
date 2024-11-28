@@ -14,12 +14,15 @@ class _SideDrawerMenuState extends State<SideDrawerMenu> {
   @override
   Widget build(BuildContext context) {
     final data = SideMenuData();
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 30),
-      child: Container(
-        child: ListView.builder(
-          itemCount: data.menu.length,
-          itemBuilder: (context, index) => buildMenuEntry(data, index),
+    return Container(
+      color: MyAppColor.bgColor,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 90, horizontal: 30),
+        child: Container(
+          child: ListView.builder(
+            itemCount: data.menu.length,
+            itemBuilder: (context, index) => buildMenuEntry(data, index),
+          ),
         ),
       ),
     );

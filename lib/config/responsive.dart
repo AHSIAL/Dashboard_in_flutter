@@ -14,12 +14,12 @@ class Responsive extends StatelessWidget {
   // Static method to check if the current screen is Tablet
 
   static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width < 1024 &&
+      MediaQuery.of(context).size.width < 1200 &&
       MediaQuery.of(context).size.width > 767;
 
 // Static method to check if the current screen is Desktop
   static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 1025;
+      MediaQuery.of(context).size.width >= 1201;
 
   @override
   Widget build(BuildContext context) {

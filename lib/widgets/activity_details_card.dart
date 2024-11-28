@@ -1,3 +1,4 @@
+import 'package:dashboard/config/responsive.dart';
 import 'package:dashboard/data/health_details.dart';
 import 'package:dashboard/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,10 @@ class ActivityDetailsCard extends StatelessWidget {
     final healthDetails = HealthDetails();
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 4, crossAxisSpacing: 15, mainAxisSpacing: 12),
+        crossAxisCount: Responsive.isMobile(context) ? 2 : 4,
+        crossAxisSpacing: Responsive.isMobile(context) ? 12 : 15,
+        mainAxisSpacing: 12,
+      ),
       itemCount: healthDetails.HealthData.length,
       shrinkWrap: true,
       physics: const ScrollPhysics(),
